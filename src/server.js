@@ -3,8 +3,8 @@ const app = require('.');
 const { connectdb } = require('./config/db');
 connectdb();
 
-const port =3000;
-app.listen(port,()=>{
-    console.log('Server is connected now : ',port);
-    
-})
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log('Server is connected now : ', PORT);
+});
